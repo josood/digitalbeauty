@@ -1,0 +1,418 @@
+@charset "UTF-8";
+@media screen and (min-width: 35.5em) {
+  body,
+  html {
+    font-size: 10px; } }
+
+@media screen and (min-width: 48em) {
+  body,
+  html {
+    font-size: 10px; } }
+
+@media screen and (min-width: 64em) {
+  body,
+  html {
+    font-size: 11px; } }
+
+@media screen and (min-width: 80em) {
+  body,
+  html {
+    font-size: 11px; } }
+
+.container-header-promotion-area,
+.header-row-menu {
+  display: none; }
+
+.catalogue * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.beauty-menu {
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 111; }
+
+.fixed-nav .beauty-menu {
+  position: fixed;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  background: white; }
+
+.catalogue {
+  display: inline-block;
+  width: 100%;
+  /*li {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        list-style-type: disc;
+        margin-left: 2rem
+    }*/ }
+  .catalogue .gutter {
+    margin: 10px;
+    padding: 0px; }
+  .catalogue .padding-top-20 {
+    padding-top: 20px; }
+  .catalogue p {
+    margin-bottom: 1.6rem;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 2.0rem; }
+  .catalogue a {
+    font-size: 1.4rem;
+    line-height: 2.0rem; }
+  .catalogue h1 {
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin: 0px;
+    line-height: 4.2rem;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .catalogue h3 {
+    font-size: 2.35rem;
+    font-weight: 600;
+    margin: 0px;
+    line-height: 4rem;
+    color: black;
+    text-align: center;
+    color: #632639; }
+  .catalogue h2 {
+    font-size: 3rem;
+    color: black;
+    font-weight: 300;
+    line-height: 3.8rem;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+    color: #632639; }
+  .catalogue .text-center img {
+    margin: 0 auto; }
+  .catalogue .padding {
+    padding: 10px; }
+  .catalogue .x-large {
+    max-width: 1270px;
+    margin: 0 auto; }
+  .catalogue .large {
+    max-width: 1110px;
+    margin: 0 auto; }
+  .catalogue .normal {
+    max-width: 940px;
+    margin: 0 auto; }
+    @media screen and (min-width: 48em) {
+      .catalogue .normal {
+        padding: 10px; } }
+  .catalogue .medium {
+    max-width: 750px;
+    margin: 0 auto; }
+  .catalogue .sml-gap {
+    margin-top: 1rem; }
+  .catalogue .md-gap {
+    margin-top: 2rem; }
+  .catalogue .xl-gap {
+    margin-top: 4rem; }
+    @media screen and (max-width: 48em) {
+      .catalogue .xl-gap {
+        margin-top: 2rem; } }
+  .catalogue .xxl-gap {
+    margin-top: 10rem; }
+  .catalogue .xxl-gap {
+    margin-top: 10rem; }
+  .catalogue .sml-gap-bottom {
+    padding-bottom: 2rem; }
+  .catalogue .relative {
+    position: relative; }
+  .catalogue .width75 {
+    max-width: 70% !important; }
+    @media screen and (min-width: 48em) {
+      .catalogue .width75 {
+        max-width: 70% !important; } }
+  .catalogue .width50 {
+    max-width: 50% !important; }
+  .catalogue .width40 {
+    max-width: 40% !important; }
+    @media screen and (max-width: 48em) {
+      .catalogue .width40 {
+        max-width: 70% !important; } }
+  .catalogue p.small {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.01em; }
+  .catalogue .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .catalogue .text-center {
+    text-align: center; }
+  .catalogue .flex-center {
+    display: flex !important;
+    align-items: center;
+    justify-content: center; }
+  .catalogue .button-01 {
+    background: black;
+    padding: 5px 20px;
+    color: white;
+    font-size: 1.4rem !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    position: relative;
+    border: 3px solid black;
+    display: inline-block; }
+  .catalogue .button-01:hover {
+    color: white !important; }
+  .catalogue .text-left {
+    text-align: left; }
+  .catalogue h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    margin: 5px; }
+  .catalogue .lg-txt {
+    font-size: 1.6rem; }
+  .catalogue .menu-container {
+    font-family: futura-pt, "proxima-nova", sans-serif;
+    /* Effect 10: reveal, push out */ }
+    .catalogue .menu-container nav a {
+      position: relative;
+      display: inline-block;
+      margin: 15px 15px;
+      outline: none;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+      font-size: 2rem; }
+    .catalogue .menu-container nav a:hover,
+    .catalogue .menu-container nav a:focus {
+      outline: none; }
+    .catalogue .menu-container .color-10 {
+      background: #020024;
+      background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%); }
+    .catalogue .menu-container .cl-effect-10 {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 10px; }
+    .catalogue .menu-container .cl-effect-10 a {
+      overflow: hidden;
+      margin: 0 3px; }
+      .catalogue .menu-container .cl-effect-10 a span.menu-01 {
+        background: #ef4d9f;
+        background: linear-gradient(90deg, #ef4d9f 0%, #ed407b 100%); }
+      .catalogue .menu-container .cl-effect-10 a span.menu-02 {
+        background: #ed4077;
+        background: linear-gradient(90deg, #ed4077 0%, #ed4162 100%); }
+      .catalogue .menu-container .cl-effect-10 a span.menu-03 {
+        background: #ed4262;
+        background: linear-gradient(90deg, #ed4262 0%, #ee4562 100%); }
+      .catalogue .menu-container .cl-effect-10 a span.menu-04 {
+        background: #ee4463;
+        background: linear-gradient(90deg, #ee4463 0%, #ec346f 100%); }
+      .catalogue .menu-container .cl-effect-10 a span.menu-05 {
+        background: #ec3171;
+        background: linear-gradient(90deg, #ec3171 0%, #ea2178 100%); }
+    .catalogue .menu-container .cl-effect-10 a span {
+      display: block;
+      padding: 20px 20px;
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s; }
+    .catalogue .menu-container .cl-effect-10 a::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      padding: 20px 20px;
+      /*width: 100%;*/
+      height: 100%;
+      background: #000;
+      color: #fff;
+      content: attr(data-hover);
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+      -webkit-transform: translateX(-25%); }
+    .catalogue .menu-container .cl-effect-10 a.beautylogo::before {
+      display: none; }
+    .catalogue .menu-container .cl-effect-10 a:hover span,
+    .catalogue .menu-container .cl-effect-10 a:focus span {
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      transform: translateX(100%); }
+    .catalogue .menu-container .cl-effect-10 a:hover::before,
+    .catalogue .menu-container .cl-effect-10 a:focus::before {
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      transform: translateX(0%); }
+  .catalogue .swiper-container {
+    width: 100%;
+    height: auto;
+    padding: 0px; }
+  .catalogue .swiper-container .swiper-slide {
+    min-height: 845px; }
+  .catalogue #subMenu {
+    height: 80px;
+    width: inherit;
+    background: #000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    padding: 10px; }
+
+.tagline {
+  text-align: center; }
+  .tagline img {
+    max-width: 75%; }
+    @media screen and (min-width: 48em) {
+      .tagline img {
+        max-width: 40%; } }
+.fragrance {
+  background: #f8e6e6;
+  background-image: url("../images/botanic-bbg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+  position: relative; 
+      @media screen and (max-width: 48em) {
+            background-size: 100%;
+        }
+}
+  .fragrance h1 {
+    color: #ed3f7d;
+    padding-top: 4rem; }
+
+.content {
+  background: white; }
+
+.highlight {
+  font-weight: 600;
+  color: #e73378; }
+
+.odd {
+  border-left: 10px solid #f8e6e6; }
+
+.even .page:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/book-marking.png) top left repeat-y;
+  top: 0px;
+  left: 0px;
+  z-index: 0; }
+
+.fragrance-catalogue .swiper-pagination {
+  position: relative !important;
+  bottom: 0px !important;
+  background: #f8e6e6; }
+
+.exclusions {
+  background: #f8e6e6;
+  text-align: left; }
+  .exclusions p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-top: 10px; }
+
+.page {
+  background: white;
+  padding: 20px;
+  min-height: 880px; }
+
+.swiper-wrapper,
+.swiper-slide {
+  background: #f8e6e6 !important; }
+
+.padding-tb {
+  padding: 20px 0px 0px 0px; }
+
+.beautylogo {
+  max-width: 0;
+  overflow: hidden;
+  background: white;
+  transition: all .5s;
+  font-weight: 600;
+  font-size: 30px;
+  opacity: 0;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.fixed-nav .beautylogo {
+  max-width: 50%;
+  opacity: 1; }
+
+.header-row-one {
+  padding: 0px; }
+  .header-row-one .span8 {
+    border: 0px solid red;
+    padding-top: 40px; }
+
+.beauty-menu nav {
+  width: 100%;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+
+#menuToggle {
+  display: none; }
+
+.menu-icon {
+  display: none; }
+
+/*Início das configurações da Navigation com dispositivos < 768px*/
+@media screen and (max-width: 768px) {
+  .beauty-menu {
+    width: 100%;
+    height: auto; }
+  .beauty-menu ul {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.3s;
+    -moz-transition: max-height 0.3s;
+    -ms-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+    /*Para fazer com que o menu saia da esquerda, você deve trocar max-height por max-width*/
+    /*Para fazer com que o menu saia da direita, você deve trocar max-height por max-width e setar float: right*/ }
+  .beauty-menu ul a {
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0px 10px 5%; }
+  .menu-icon {
+    width: 100px;
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 60px; }
+  #menuToggle:checked ~ ul {
+    max-height: 350px;
+    /*Para fazer com que o menu saia da esquerda ou direita, você deve trocar max-height por max-width*/ }
+  .menu-icon i {
+    font-size: 1.7em; } }

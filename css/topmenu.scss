@@ -1,0 +1,464 @@
+.menu-container {
+    font-family: futura-pt, "proxima-nova", sans-serif;
+    margin: 0 auto;
+    position: relative;
+
+    nav a {
+        position: relative;
+        display: inline-block;
+        margin: 5px 5px;
+        outline: none;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+        font-size: 2rem;
+
+    }
+
+    /* Effect 10: reveal, push out */
+    .cl-effect-10 {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0px;
+
+        @media all and (max-width: 64em) {
+            right: 40px;
+            margin-left: 40px;
+        }
+    }
+
+    .cl-effect-10 a {
+        overflow: hidden;
+        margin: 0 3px;
+        text-decoration: none;
+        color: white;
+
+        span.menu-01 {
+            background: rgb(239, 77, 159);
+            background: linear-gradient(90deg, rgba(239, 77, 159, 1) 0%, rgba(237, 64, 123, 1) 100%);
+        }
+
+        span.menu-02 {
+            background: rgb(237, 64, 119);
+            background: linear-gradient(90deg, rgba(237, 64, 119, 1) 0%, rgba(237, 65, 98, 1) 100%);
+        }
+
+        span.menu-03 {
+            background: rgb(237, 66, 98);
+            background: linear-gradient(90deg, rgba(237, 66, 98, 1) 0%, rgba(238, 69, 98, 1) 100%);
+        }
+
+        span.menu-04 {
+            background: rgb(238, 68, 99);
+            background: linear-gradient(90deg, rgba(238, 68, 99, 1) 0%, rgba(236, 52, 111, 1) 100%);
+        }
+
+        span.menu-05 {
+            background: rgb(236, 49, 113);
+            background: linear-gradient(90deg, rgba(236, 49, 113, 1) 0%, rgba(234, 33, 120, 1) 100%);
+        }
+
+    }
+
+    .cl-effect-10 a span {
+        display: block;
+        padding: 20px 20px;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+
+        @media screen and (max-width: 48em) {
+            padding: 15px 10px;
+        }
+
+        @media screen and (max-width: 64em) {
+            padding: 10px;
+        }
+
+    }
+
+
+
+
+
+}
+
+
+
+.beautylogo {
+    max-width: 0;
+    overflow: hidden;
+    background: white;
+    transition: all .5s;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-nav .beautylogo {
+    max-width: 50%;
+    opacity: 1;
+
+    @media screen and (max-width: 768px) {}
+}
+
+.beauty-menu nav {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.beauty-menu ul a {}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/*Início das configurações da Navigation com dispositivos < 768px*/
+@media screen and (max-width: 768px) {
+    .beauty-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    .beauty-menu ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.3s;
+        -moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+        transition: max-height 0.3s;
+        /*Para fazer com que o menu saia da esquerda, você deve trocar max-height por max-width*/
+        /*Para fazer com que o menu saia da direita, você deve trocar max-height por max-width e setar float: right*/
+    }
+
+    .beauty-menu ul a {
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        padding: 10px 0px 10px 5%;
+    }
+
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 60px;
+    }
+
+    #menuToggle:checked ~ ul {
+        max-height: 350px;
+        /*Para fazer com que o menu saia da esquerda ou direita, você deve trocar max-height por max-width*/
+    }
+
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+}
+
+
+
+#Categorias {
+
+    background: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: both;
+}
+
+.categorias {
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+
+}
+
+.categorias .icone {
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 24px;
+    margin: 4px 10px;
+}
+
+.categorias .icone.active {
+    width: 100%;
+    display: block;
+    float: none;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+}
+
+.categorias .icone span {
+    margin-top: 10px;
+}
+
+.categorias .icone span,
+.categorias .icone span:before,
+.categorias .icone span:after {
+    cursor: pointer;
+    border-radius: 3px;
+    height: 3px;
+    width: 24px;
+    background: #333;
+    position: absolute;
+    display: block;
+    content: '';
+    -webkit-transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47);
+    -moz-transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47);
+    transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47);
+    right: 0px;
+    z-index: 1111;
+}
+
+.categorias .icone span:before {
+    top: -10px;
+}
+
+.categorias .icone span:after {
+    bottom: -10px;
+}
+
+.categorias .icone.active span {
+    background-color: transparent;
+}
+
+.categorias .icone.active span:before,
+.icon.active span:after {
+    top: 10px;
+}
+
+.categorias .icone.active span:before {
+    -webkit-transform: rotate(45deg) scale(1.2);
+    -moz-transform: rotate(45deg) scale(1.2);
+    -ms-transform: rotate(45deg) scale(1.2);
+    -o-transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.2);
+}
+
+.categorias .icone.active span:after {
+    -webkit-transform: rotate(-45deg) scale(1.2);
+    -moz-transform: rotate(-45deg) scale(1.2);
+    -ms-transform: rotate(-45deg) scale(1.2);
+    -o-transform: rotate(-45deg) scale(1.2);
+    transform: rotate(-45deg) scale(1.2);
+}
+
+.categorias ul.myCat {
+    position: relative;
+    /*max-width: calc(100% - 100px);*/
+    margin: 0 auto;
+}
+
+.categorias ul.myLinks {
+    background: #FFF;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.stickey-nav {
+
+    .menu-container .cl-effect-10 {
+        right: 0px;
+        margin-left: -20px;
+    }
+
+    .menu-container {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .beautylogo {
+        max-width: 40%;
+        overflow: hidden;
+        background: white;
+        transition: all .5s;
+        font-weight: 600;
+        font-size: 30px;
+        opacity: 1;
+        flex: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        padding: 10px;
+
+        img {
+            width: 200px;
+            padding: 10px;
+        }
+
+        @media all and (max-width: 64em) {
+            flex: none;
+
+            img {
+                width: 200px;
+            }
+
+        }
+
+    }
+
+    .menu-container .cl-effect-10 a span {
+        padding: 15px 10px;
+        font-size: 1.8rem;
+
+        @media screen and (max-width: 80em) {
+            font-size: 1.4rem !important;
+        }
+
+        @media screen and (max-width: 48em) {
+            font-size: 1.4rem !important;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.stickey-nav .sticky-icon {
+    display: none;
+}
+
+.stickey-nav nav a {
+    @media screen and (max-width: 80em) {
+        font-size: 1.4rem !important;
+    }
+
+    @media screen and (max-width: 48em) {
+        font-size: 1.2rem !important;
+    }
+
+}
+
+@media all and (max-width: 48em) {
+    .categorias .icone {
+        display: inline-flex;
+        justify-content: flex-end;
+        padding-right: 0px;
+        position: relative;
+        right: 20px;
+
+    }
+
+
+    .categorias {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .categorias ul.myCat,
+    .categorias ul.myLinks,
+    .categorias ul.myCat .dropdown:hover ul,
+    .categorias ul li:hover ul {
+        display: none;
+    }
+
+    .categorias ul.myCat.view,
+    .categorias ul.myLinks.view,
+    .categorias ul.myCat .dropdown .lista.view {
+        width: 100%;
+        display: block;
+    }
+
+    .categorias ul.myCat.view li {
+        width: 100%;
+        display: block;
+    }
+
+    .categorias ul.myCat.view li:hover ul {
+        position: relative;
+        margin: 0;
+        width: inherit !important;
+        width: 100%;
+    }
+
+}
+
+.categorias ul li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0px;
+}
+
+.categorias ul li ul {
+    background: transparent;
+    width: 150px;
+    display: block;
+    position: absolute;
+    left: -9999px;
+    padding: 1em 0 0 0;
+    z-index: 999;
+}
+
+.categorias ul li:hover ul {
+    display: block;
+    left: auto;
+}
+
+.categorias ul li ul li {
+    background: #FFF;
+    display: block;
+    -webkit-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+#Categorias.stickey-nav {
+    background: #FFF;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    right: 0;
+}
+
+#curlybracket {
+    position: absolute;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+}

@@ -1,0 +1,470 @@
+/* ======================= NOTE ======================= 
+	Content managed HTML is wrapped in a div with the class .f.
+	Use this class before any styles which target content managed HTML, 
+	so we don't overwrite global website styles
+*/
+
+/* ======================= GLOBAL STYLES ======================= 
+	Overwriting global website styles
+*/
+
+.ish-content {
+	min-height: 0; /* for stacked components in the events page */
+}
+
+.tile-image img {
+    width: 100%; /* full width tile images to fix up on mobile */
+}
+
+/* START show elements on mobile */
+@media only screen and (max-width: 767px)
+{
+	.show-mobile {
+    	display: block !important;
+	}
+	.hide-mobile {
+		display: none !important;
+	}
+	.hide-banner-title-border {
+		border-right: 0px !important;
+	}
+} 
+/* END show elements on mobile */ 
+
+/* START Overwriting Promotion Bar */
+.container-promotion-bar {
+	background: #702082;
+}
+
+.promotion-bar {
+	background: #702082;	
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+	letter-spacing: 0.5px;
+	text-transform: none;
+}
+	.promotion-bar a {
+		text-decoration: underline;
+	}
+
+@media only screen and (max-width: 767px)
+{
+	.promotion-bar {
+		background: #702082;
+		font-size: 11px;
+		height: 35px;
+		line-height: 17px;
+	}
+}
+/* END Overwriting Promotion Bar */
+
+.container-category-branding .span12 h3 {
+	text-transform: capitalize;
+}
+
+.vco-timeline .vco-navigation .timenav-background .timenav-tag div h3 {
+	color: #999;
+}
+
+.thumbnail h3 {
+	text-align: center;	
+}
+
+	.thumbnail.two-columns h3 {
+		text-align: left;
+	}
+
+/* Overwriting IS homepage tile links and buttons */
+
+.homepage-tile li {
+    background: url("/web/20160814031621im_/http://www.farmers.co.nz/INTERSHOP/static/WFS/Farmers-Shop-Site/-/-/en_NZ/img/sprite-global-icons.png") no-repeat scroll left -902px rgba(0, 0, 0, 0);
+    padding: 0 0 2px 15px;
+}
+.homepage-tile .tile-bottom-link {
+    background: none repeat scroll 0 0 #fafafa;
+    border-bottom: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 15px 10px;
+    position: relative;
+    width: 100%;
+}
+.homepage-tile li a, .homepage-tile li a:visited {
+    color: #454545;
+    font-size: 14px;
+    text-decoration: none;
+}
+	.homepage-tile li a:hover {
+		text-decoration: underline;
+	}
+.homepage-tile .button-link a {
+    background: none repeat scroll 0 0 #333;
+    bottom: 15px;
+    color: #fff;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    position: absolute;
+    right: 15px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}	
+	
+/* Overwriting IS size guide table rules with default Bootstrap values */
+.sizeGuide-dialog input {
+font-size: 12px;
+}
+
+.sizeGuide-dialog table { /* not default, but required to fit Farmers content in pop-up */
+font-size: 85%;
+}
+
+.sizeGuide-dialog th {
+color: #333333;
+background: none;
+padding: 8px;
+}
+
+.sizeGuide-dialog tr {
+border-bottom: gray;
+border-right: gray;
+}
+
+.sizeGuide-dialog tr:nth-child(odd) {
+background: #f9f9f9;
+}
+
+.sizeGuide-dialog tr:nth-child(even) {
+background: #fff;
+}
+
+.sizeGuide-dialog tr td {
+border-left: 1px solid #ddd;
+padding: 8px;
+white-space: nowrap;
+}	
+
+.sizeGuide-dialog {
+max-width: 400px;
+}
+
+/* Colour swatches */
+ul.ish-imageVariationList li {
+margin-left: 2px;
+}
+
+ul.ish-imageVariationList li.variation-color-list a {
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+border: 1px solid #fff;
+padding: 2px;
+}
+
+ul.ish-imageVariationList li.variation-color-list a.selected {
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+padding: 2px;
+}
+
+ul.ish-imageVariationList li.variation-color-list .variation-colorblock {
+	border: 1px solid #ccc;
+}
+	
+/* ======================= GENERAL TAGS ======================= 
+	Tags reused on multiple pages
+*/
+
+.f a { 
+	text-decoration: underline;
+}
+
+.f h1,
+.f h2 {
+	line-height: 2em;
+}
+
+	.f h2 {
+		/* margin-top: 1em; */
+	}
+	
+		.f h2 a {
+			color: #333;	
+		}
+	
+		.f h2 em {
+			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+			font-size: 1.2em;
+		}
+
+.f p {
+	padding-bottom: 5px;
+}
+
+.f td {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Geneva, "DejaVu Sans", sans-serif;
+}
+
+.f button {
+	margin-right: 3px;
+}
+
+/* ======================= GENERIC CLASSES ======================= 
+	Classes reused on multiple pages
+*/
+
+.f {
+	padding: 1em 0;
+}
+
+	.f + .f {
+		padding: 0; /* for stacked components in the events page */
+	}
+
+.f .cms-breadcrumb {
+	margin-top: 0;
+}
+
+.f .fcc-exclusive {
+	color: #ba1c87;
+	padding: .5em 0;
+}
+
+.f .bulleted, .f .bulleted li {
+	margin: .5em 1em;
+}
+
+	.f ul.bulleted li {
+		list-style: disc;
+	}
+
+	.f ol.bulleted li {
+		list-style-type: decimal;
+	}
+
+.f .row-fluid ul:nth-of-type(1),.f .row-fluid li:first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.f .collapse {
+	height: 0;
+}
+
+.f .in {
+	height: auto;
+}
+
+.f #hero-features .row-fluid,
+.f .spaced-rows .row-fluid {
+	padding-bottom: 1em;
+}
+
+.f .ish-field-buttonGroup {
+	margin: 10px 0;
+}
+
+.f .homepage-secont-lever-banner div.banner-content {
+	max-height: 100px;
+}
+
+.homepage-secont-lever-banner {
+	-webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.4);
+	box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.4);
+	margin-bottom:20px;
+	border: none;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.homepage-secont-lever-banner:hover {
+	-webkit-box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.4);
+	box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.4);
+	margin-bottom: 20px;
+	border: none;
+}
+.homepage-secont-lever-banner .banner-title{
+	color:#000;
+	text-transform:uppercase;
+	font-weight:bold;
+	
+}
+.homepage-secont-lever-banner .banner-content-text {
+	height:20px;
+}
+.homepage-secont-lever-banner .banner-content{
+		color:#6b6b6b;
+	border-top:1px dotted #ccc;
+	padding:14px 9px 15px 15px;
+	max-height: 59px;
+    overflow: hidden;
+	
+}
+
+.f #comp-accordion .row-fluid {
+	margin-bottom: 1em;
+}
+
+.f .table.no-dividers td {
+	border-top: 0;
+}
+
+.f .row-fluid .checklist,
+.f td.text-center {
+	text-align: center;
+}
+
+.f .brandLinks {  
+  list-style-type:none;  
+  margin:0px;
+  padding:15px;
+  background:#f4f4f4;  
+  font-family: arial, helvetica, sans-serif;
+}
+
+	.f .brandLinks li {
+	  display:inline-block;
+	}
+
+		.f .brandLinks a, .f .brandLinks a:visited {
+		  color:#fff;
+		  font-size:13px;
+		  background:#000;
+		  padding:12px 20px;
+		  text-decoration:none; 
+		  text-transform:uppercase;
+		  letter-spacing:1px;
+		  display:block;
+		  margin:5px;
+		  transition: all 0.3s ease;
+		}
+
+			.f .brandLinks a:hover {
+			  background:#732d81;
+			}
+
+			.f .brandLinks a:active {
+			  background:#511d5c;
+			}
+
+/* http://embedresponsively.com/ video container styles */
+.f .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+.f .embed-container iframe, .f .embed-container object, .f .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/* ======================= STRUCTURE / CONTENT ======================= 
+	Tags and classes for structure or for specific pages
+*/
+
+.f .farmersfinance h2 {
+	color: #4c0d70;
+}
+
+.f .farmersclub h2 {
+	color: #ba1c86;
+}
+
+.f .xmasTree h2 {
+	font-family: "Susies Hand", "Lucida Sans Unicode", "Lucida Grande", Geneva, "DejaVu Sans", sans-serif;
+	font-size: 3em;
+	background-color: #6f2b90;
+	color: white;
+	padding-top: 0;
+	padding-left: .5em;
+	margin-bottom: .5em;
+}
+
+.f .xmasTree p {
+	font-family: "Narziss", "Lucida Sans Unicode", "Lucida Grande", Geneva, "DejaVu Sans", sans-serif;
+	font-size: 1.25em;
+	color: #6f2b90;
+	padding-left: 1em;
+}
+
+.f .main {
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+
+.f .container{
+margin:0px;
+
+}
+
+.f .wrap {
+	width:895px;
+}
+
+.f .header {
+	padding-top:50px;
+	padding-bottom:20px;
+	width:895px;
+}
+
+.f .header2 {
+	padding-bottom:40px;
+	width:895px;
+}
+
+.f .txtline {
+	font:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-weight:lighter;
+	font-size:13px;
+	align-content:center;
+	text-decoration:none;
+	color:#000000;
+}
+
+.f .txt {
+	font:unna;
+	font-size:30px;  
+	align-content:center;
+	padding-top:7px;
+	padding-bottom:5px;
+	text-decoration:none;
+	color:#000000;
+}
+
+.f .column{
+align-content:center;
+float:left;
+padding:5px;
+}
+
+.f .image{
+	align-content:center;
+}
+
+.f .image2{
+	align-content:center;
+	padding-top:30px;
+}
+/*
+     FILE ARCHIVED ON 03:16:21 Aug 14, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:10:42 Sep 25, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.503
+  exclusion.robots: 0.023
+  exclusion.robots.policy: 0.014
+  esindex: 0.01
+  cdx.remote: 7.028
+  LoadShardBlock: 137.528 (3)
+  PetaboxLoader3.datanode: 251.465 (4)
+  load_resource: 306.195
+  PetaboxLoader3.resolve: 109.375
+*/
