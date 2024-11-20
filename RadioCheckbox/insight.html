@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<style>  .main-decision-tree * {
+      box-sizing: border-box
+  }
+.main-decision-tree h2{
+    font-weight: 100;
+    color:#3455DB
+}
+.main-decision-tree h3{
+    color:#212B36;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.main-decision-tree h1{
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 0px;
+    text-align: center
+}
+
+  .main-decision-tree *:before,
+  .main-decision-tree *:after {
+      box-sizing: border-box
+  }
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap');
+
+  body  {
+      font-family: "Open Sans", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.428571429;
+      background: #f3f6f8;
+  }  
+.main-decision-tree   {
+      font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+  }
+
+  .main-decision-tree .text-left {
+      text-align: left
+  }
+  .main-decision-tree .text-right {
+      text-align: right
+  }
+
+  .main-decision-tree .text-center {
+      text-align: center
+  }
+
+  .main-decision-tree .text-justify {
+      text-align: justify
+  }
+
+  .main-decision-tree label {
+      display: inline-block;
+
+  }
+
+  .main-decision-tree input[type="search"] {
+      box-sizing: border-box
+  }
+
+  .main-decision-tree .btn-group-justified > .btn,
+  .main-decision-tree .btn-group-justified > .btn-group {
+      float: none;
+      display: table-cell;
+      width: 1%
+  }
+
+  .main-decision-tree .hidden {
+      display: none !important;
+      visibility: hidden !important
+  }
+
+  .main-decision-tree .btn-group-justified label {
+      padding: 10px 10px 9px 10px;
+      width: 100%;
+      margin: 0;
+      cursor: pointer
+  }
+
+  .main-decision-tree .btn-radio input[type=radio] {
+     display: none;
+
+  }
+
+
+  .main-decision-tree .btn-radio input[type=radio] + label {
+      background: none;
+      color: #424242;
+      border: 1px solid #d8d8d8;
+      font-weight: 300;
+      line-height: 1.2rem;
+  } 
+.main-decision-tree .btn-radio input[type=radio] + label:hover {
+      background: #595a5b;
+      color: #fff;
+      border: 1px solid #595a5b;
+      font-weight: 300;
+      line-height: 1.2rem;
+  }
+
+.main-decision-tree .btn-radio input[type=radio] + label span{
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+  .main-decision-tree .btn-radio input[type=radio]:checked + label {
+      /*background: #3455DBxxx;*/
+      background: #3455DB;
+      color: #fff;
+      border-color: #3455DB
+  }
+
+  .main-decision-tree .decision-tree .max-620 {
+      max-width: 620px;
+      margin: 0 auto
+  }
+.main-decision-tree .max-50 {
+      max-width: 50%;
+      margin: 0 auto
+  }
+
+  .main-decision-tree .decision-tree .question {
+      font-size: 18px;
+      line-height: 24px;
+      position: relative;
+      padding-top: 20px
+  }
+
+  .main-decision-tree .decision-tree .answer {
+      padding: 20px 30px 20px;
+      /*border: 1px dashed #d8d8d8;*/
+      position: relative;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+
+  .main-decision-tree .decision-tree .answer .answer-head {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #7c7c7c;
+      background: #f7f7f7;
+      padding: 10px;
+      margin: -20px -30px 20px
+  }
+
+  .main-decision-tree .decision-tree svg.connector + .question:before,
+  .main-decision-tree .decision-tree svg.connector + .answer:before {
+      content: '';
+      display: block;
+      width: 11px;
+      height: 11px;
+      left: 50%;
+      margin-left: -6px;
+      top: -14px;
+      position: absolute;
+      background: #3455DB;
+      border-radius: 5px
+  }
+
+  .main-decision-tree .decision-tree svg.connector {
+      width: 100%;
+      height: 100px
+  }
+
+  .main-decision-tree .decision-tree svg.connector .marker-circle {
+      fill: #3455DB;
+      stroke: none
+  }
+
+  .main-decision-tree .decision-tree svg.connector .connector-line {
+      stroke: #3455DB;
+      stroke-width: 1
+  }
+
+  .main-decision-tree .decision-tree svg.connector .ending-line {
+      marker-end: url(#markerCircle)
+  }
+
+.main-decision-tree .padding {
+    padding: 10px;
+}
+
+.main-decision-tree .container {
+    max-width:900px;
+    margin: 0 auto;
+ padding: 20px;   
+}
+
+.main-decision-tree section{
+clear: both;
+}
+
+.main-decision-tree .image-pure {
+    max-width: 100%;
+}
+
+.main-decision-tree h4 {
+    font-weight: 300
+}
+
+.main-decision-tree .img-text-center {
+    margin: 0 auto;
+    display: block;
+}
+
+</style>
+<body>
+   
+    
+<div class="main-decision-tree">
+
+    <section class="decision-tree" style="min-height: 267px;">
+        <div class="full-width-bg-white cushion-top-bottom">
+            <div class="container text-center text-left-mobile cushion-bottom" style="background: white">
+                 <h1>What component do I use?</h1>
+                <h2><br>Segments Vs Selectors</h2>
+                <div id="q1" class="visible">
+                    <div class="max-620 question">
+                        Can you select more than <b>one</b> option?<br><br>
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1" id="answer-1-a" value="q1-option1">
+                                <label for="answer-1-a" class="">
+                                    Yes
+                                    <br>
+                                    <span>Multi select</span>
+                                </label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1" id="answer-1-b" value="q1-option2">
+                                <label for="answer-1-b" class="">
+                                    No
+                                    <br>
+                                    <span>Single select</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CHECKBOX | YES-->
+
+                <div id="q1-option1" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+                    <div class="max-620 question">
+                        How many options can you select from?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-a" value="a1a">
+                                <label for="answer-1a-a" class="">2-3 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-b" value="a1b">
+                                <label for="answer-1a-b" class="">4-7 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-c" value="a1c">
+                                <label for="answer-1a-c" class="">> 8 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-d" value="a1d">
+                                <label for="answer-1a-d" class="">> 16 options</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a1a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="12.5%" y1="0%" x2="12.5%" y2="30%" class="connector-line"></line>
+                        <line x1="12.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Checkbox list</h3>
+                        <p>Checkboxes are used when there are lists of options and the user may select any number of choices. Each checkbox is independent of all other checkboxes in the list, so checking one box doesn't uncheck the others.</p>
+                        <h2 style="text-align: left; ">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/checkbox-list.gif" style="max-width:70%">
+                        
+                        <h3>Checkbox icon list</h3>
+                        <p>Our brains process visual images significantly faster than text. Icon/visual selector are immediately recognisable without the need of much explanation. </p>
+                        <h2 style="text-align: left; margin: 0">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/checkbox-icon.png" style="max-width:100%">
+                    </div>
+                </div>
+
+                <div id="a1b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="37.5%" y1="0%" x2="37.5%" y2="30%" class="connector-line"></line>
+                        <line x1="37.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Checkbox list</h3>
+                        <p>Checkboxes are used when there are lists of options and the user may select any number of choices. Each checkbox is independent of all other checkboxes in the list, so checking one box doesn't uncheck the others.</p>
+                        <h2 style="text-align: left; margin: 0">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/checkbox-4to7.png" style="max-width:70%">
+                    </div>
+                </div>
+                
+                <div id="a1c" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="62.5%" y1="0%" x2="62.5%" y2="30%" class="connector-line"></line>
+                        <line x1="62.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Multiple selection</h3>
+                        <p>Multi selection can be used when a user wants to store multiple values for the same record. </p>
+                        <h2 style="text-align: left; margin: 0px ">For example</h2>
+                        <img src="/download/attachments/142722244/multi-select.gif" style="max-width:100%">
+                    </div>
+                </div>
+            <div id="a1d" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="87.5%" y1="0%" x2="87.5%" y2="30%" class="connector-line"></line>
+                        <line x1="87.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Multiple search selection</h3>
+                        <p>A selection dropdown can allow a user to search through a large list of choices.</p>
+                        <h2 style="text-align: left; margin: 0px ">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/multiple-search-select.gif" style="max-width:100%">
+                    </div>
+                </div>
+
+                <!--RADIO | NO-->
+
+                <div id="q1-option2" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        How many options can you select from?<br><br>
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-a" value="q2a">
+                                <label for="question-1b-a" class="">2 option</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-b" value="q2b">
+                                <label for="question-1b-b" class="">3-7 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-c" value="q2c">
+                                <label for="question-1b-c" class="">> 8 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-d" value="q2d">
+                                <label for="question-1b-d" class="">> 16 options</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q2a" class="hidden">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="12.5%" y1="0%" x2="12.5%" y2="30%" class="connector-line"></line>
+                        <line x1="12.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+
+                    <div class="max-620 answer">
+
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div >
+                                <h3>A toggle switch</h3>
+                                <p>A toggle switch represents a physical switch and is an “either/or” control<br></p>
+                                <img src="/download/attachments/142722244//download/attachments/142722244/toggle-yes-no.gif"  style="max-width: 250px">
+                                
+                            </div>
+                            
+                            <div >
+                                
+                                <h3>A stand-alone checkbox</h3>
+                                <p>A stand-alone checkbox is usually used at the end of a form to confirm that the user agrees to certain conditions.</p>
+                                <img src="/download/attachments/142722244//download/attachments/142722244/iagree.gif"  style="max-width: 180px">
+                            </div>
+                            
+                            <div >
+                                
+                                <h3>Radio icon list</h3>
+                        <p>Our brains process visual images significantly faster than text. Icon/visual selector are immediately recognisable without the need of much explanation. </p>
+                        <h2 style="text-align: left; margin: 0">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/radio-icon-2.gif" style="max-width: 80%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q2b" class="hidden">
+                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="37.5%" y1="0%" x2="37.5%" y2="30%" class="connector-line"></line>
+                        <line x1="37.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        Are the options short (1-2 words)?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-a" value="a2a">
+                                <label for="answer-2b-a" class="">Yes</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-b" value="a2b">
+                                <label for="answer-2b-b" class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a2a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+
+                        <h3>Segmented Control</h3>
+                        <p>A segmented control is a linear set of two or more segments, each of which functions as a mutually exclusive button.</p>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/segment.gif"  style="width:50%">
+                        <br><br>
+                        <h3>Radio icon list</h3>
+                        <p>Our brains process visual images significantly faster than text. Icon/visual selector are immediately recognisable without the need of much explanation. </p>
+                        <h2 style="text-align: left; margin: 0">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/radio-icon-3.gif" style="max-width:100%">
+                    </div>
+                </div>
+
+                <div id="a2b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Radio button list</h3>
+                        <p>Radio button lists are used when the user needs to select a single option out of a list of options.</p>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/radio-list.gif"  style="width:80%">
+                    </div>
+                </div>
+
+                <div id="q2c" class="hidden">
+                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="62.5%" y1="0%" x2="62.5%" y2="30%" class="connector-line"></line>
+                        <line x1="62.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 answer">
+                        <h3>Dropdown / Select</h3>
+                        <p>A drop-down or select is a list of options that is only revealed when a user interacts by clicking on it</p>
+                        <img src="/download/attachments/142722244/Select.png" style="max-width: 50%">
+                    </div>
+                </div>
+                 <div id="q2d" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="87.5%" y1="0%" x2="87.5%" y2="30%" class="connector-line"></line>
+                        <line x1="87.5%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Single search selection</h3>
+                        <p>A selection dropdown can allow a user to search through a large list of choices.</p>
+                        <h2 style="text-align: left; margin: 0px ">For example</h2>
+                        <img src="/download/attachments/142722244//download/attachments/142722244/search-select1.gif" style="max-width:100%">
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 100px;"></div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="full-width-bg-white cushion-top-bottom">
+            <div class="container text-left text-left-mobile cushion-bottom" style="background: white">
+                <h1> Do's and Don't</h1>
+                <div class="do">
+                    <h2>Default selection</h2>
+                    <p>It is better to have a selected radio button by default, given that people cannot deselect and set the button back to its original state once one has been selected. A default selection sets the correct user expectation.</p>
+                    <img src="/download/attachments/142722244/do1.png" style="max-width:80%" class="img-text-center">
+                </div>
+                <div class="do">
+                    <h2>Should I use a Check Box instead of Radio Buttons?</h2>
+                    <p>Use radio buttons if the meaning of the empty checkbox isn’t obvious. In example below, the choices are opposites so radio buttons are the better choice for this option.</p>
+                    <img src="/download/attachments/142722244/do2.png" style="max-width:80%"  class="img-text-center">
+                </div>
+                <div class="do">
+                    <h2>Radio Buttons or Dropdown?</h2>
+                    <p>Use radio buttons when you want user to read all options.
+                        The options are unfamiliar to user and there is less or no chance that he can predict them.
+                    </p>
+                    <img src="/download/attachments/142722244/do3.png" style="max-width:80%"  class="img-text-center">
+                </div>
+                <div class="do">
+                    <h2>For label text</h2>
+                    <p>For radio buttons label, try to be consistent. 
+Make sure that all the items are either a sentence, phrase, or word. Try to avoid some options being sentences and others being single words. Using a combination makes it inconsistent hence not a good UI practice.
+                    </p>
+                    <img src="/download/attachments/142722244/do4.png" style="max-width:80%"  class="img-text-center">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+   
+    
+    
+    <section>
+         <div class="container text-center text-left-mobile cushion-bottom" style="background: white">
+           <h1>What can I do with this component?</h1>
+             <h2>Checkbox, radio and dropdown – Anatomy</h2>
+            <div class="container text-left">
+                <h4>Radio buttons | Single select </h4>
+                <img src="/download/attachments/142722244/anatomy-radio.png" class="image-pure" style="max-width:50%">
+            </div>
+            <div  class="container text-left">
+                <h4>Checkboxes | Multi-select </h4>
+                <img src="/download/attachments/142722244/anatomy-checkbox.png" class="image-pure" style="max-width:50%">
+            </div>
+              <div  class="container text-left">
+                <h4>Standard dropdown</h4>
+                <img src="/download/attachments/142722244/anatomy-selectdropdown.png" class="image-pure" style="max-width:90%">
+            </div>
+        </div>
+    </section>
+  </div>  
+    
+    
+    <script>
+        function recordAllAnswers(e) {
+            var n = ["q1"],
+                t = document.querySelectorAll("input:checked");
+            for (i = 0; i < t.length && (n.push(t[i].value), t[i] != e); i++);
+            return n
+        }
+
+        function renderQuestions(e) {
+            hideAllQuestions(), showQuestions(e), setTimeout(function() {
+                var i = e.pop(),
+                    n = document.getElementById(i).offsetTop;
+                $("html, body").animate({
+                    scrollTop: n - 200
+                })
+            }, 50)
+        }
+
+        function showQuestions(e) {
+            for (i = 0; i < e.length; i++) document.getElementById(e[i]).className = "visible";
+            var n = document.querySelectorAll(".hidden input");
+            for (i = 0; i < n.length; i++) n[i].checked = !1
+        }
+
+        function hideAllQuestions() {
+            var e = document.querySelectorAll(".hidden, .visible");
+            for (i = 0; i < e.length; i++) e[i].className = "hidden"
+        }
+        var inputs = document.querySelectorAll(".decision-tree input[type=radio]");
+        for (i = 0; i < inputs.length; i++) inputs[i].addEventListener("click", function(e) {
+            e || (e = window.event);
+            var i = recordAllAnswers(e.target);
+            renderQuestions(i)
+        });
+    </script>
+
+
+
+</body></html>
+
+

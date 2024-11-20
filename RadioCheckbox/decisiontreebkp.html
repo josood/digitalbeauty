@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section id="lisa-recommender" class="decision-tree" style="min-height: 667px;">
+        <div class="full-width-bg-white cushion-top-bottom">
+            <div class="container text-center text-left-mobile cushion-bottom">
+                
+                <div id="q0" class="visible">
+                    <div class="max-620 question">
+                        Can you select more than <b>one</b> option?<br><br>
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q0" id="answer-0-a" value="q0a">
+                                <label for="answer-0-a" class="">
+                                    Yes
+                                    <br>
+                                    <span>Multi select</span>
+                                </label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q0" id="answer-0-b" value="q0b">
+                                <label for="answer-0-b" class="">
+                                    No
+                                    <br>
+                                    <span>Single select</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q0a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                     
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+                    <div class="max-620 question">
+                        Are the options short (1-2 words) and consistent?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q0a" id="answer-0a-a" value="q1a">
+                                <label for="answer-0a-a" class="">Yes</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q0a" id="answer-0a-b" value="a1">
+                                <label for="answer-0a-b" class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q0b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-right max-620">
+                        <line x1="75%" y1="0%" x2="75%" y2="30%" class="connector-line"></line>
+                        <line x1="75%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+                    <div class="max-620 question">
+                        Are the options short (1-2 words)ss and consistent?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q0b" id="answer-0b-a" value="q1a">
+                                <label for="answer-0a-a" class="">Yes</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q0b" id="answer-0b-b" value="q1b">
+                                <label for="answer-0a-b" class="">No</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="q1a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 answer">
+             
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-a" value="q2a">
+                                <label for="answer-1a-a" class="">Toggle Button</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-b" value="q2b">
+                                <label for="answer-1a-b" class="">Checkbox</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-c" value="a2b">
+                                <label for="answer-1a-c" class="">Not sure<span class="hidden-xs"> / other</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a1" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-right max-620">
+                        </defs>
+                        <line x1="75%" y1="0%" x2="75%" y2="30%" class="connector-line"></line>
+                        <line x1="75%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <p>Unfortunately, you must be 18-39 to open a Lifetime ISA. However, there are other smart ways to invest and make your money work harder:</p>
+
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="q2a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-left max-620">
+                        <line x1="16.6%" y1="0%" x2="16.6%" y2="30%" class="connector-line"></line>
+                        <line x1="16.6%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        Will your first home cost more than £450,000?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2a" id="answer-2a-a" value="a3a">
+                                <label for="answer-2a-a" class="">Yes or unsure</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2a" id="answer-2a-b" value="q3a">
+                                <label for="answer-2a-b" class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q2b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-middle max-620">
+                        <line x1="50%" y1="0%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        What is your current employment status?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-a" value="a3b">
+                                <label for="answer-2b-a" class="">Employed</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-b" value="a3c">
+                                <label for="answer-2b-b" class="">Self-employed</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-c" value="a3d">
+                                <label for="answer-2b-c" class="">Not employed</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a2b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>
+                            If you withdraw your money from a Lifetime ISA before you’re 60 and it’s not to buy your first home, you’ll usually pay a 25% government penalty, so you may get back less than you put in.
+                        </p>
+                        <p>This penalty will not apply to other ways of saving.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="q3a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-right max-620">
+                        <line x1="75%" y1="0%" x2="75%" y2="30%" class="connector-line"></line>
+                        <line x1="75%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        Do you plan to buy this home in the next 3 years?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q3a" id="answer-3a-a" value="a4b">
+                                <label for="answer-3a-a" class="">Yes</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q3a" id="answer-3a-b" value="a4a">
+                                <label for="answer-3a-b" class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a3a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>If the home you buy costs more than £450,000, you won’t be able to use Lifetime ISA savings for your deposit without incurring a 25% penalty &mdash; and you may get back less than you put in. However you could instead leave the money invested in a Lifetime ISA until you are 60 and use it then without penalty.</p>
+                        <p>This penalty doesn’t apply to other ways of saving such as an ISA or general investment account although those products don’t offer the 25% bonus.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="a3b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-left max-620">
+                        <line x1="16.6%" y1="0%" x2="16.6%" y2="30%" class="connector-line"></line>
+                        <line x1="16.6%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>You may receive <strong>employer-matched contributions</strong> towards your workplace pension. These contributions plus the tax relief available are likely to outweigh the Lifetime ISA 25% government bonus. Your employer is not obligated to make and/or match contributions to your Lifetime ISA.</p>
+                        <p>If you’re a <strong>higher rate taxpayer</strong>, you may get 40% tax relief on your pension contributions.</p>
+                        <p><strong>Additional rate taxpayers</strong> may get 45%.</p>
+                        <p>If you’ve <strong>maxed out</strong> your annual or lifetime allowances for pensions, a Lifetime ISA is a further option.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="a3c" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-middle max-620">
+                        <line x1="50%" y1="0%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>You won’t have a workplace pension and won’t benefit from employer-matched contributions.</p>
+                        <p>So a Lifetime ISA &mdash; and the 25% government bonus &mdash; may win over a pension, but this depends on your tax status and personal situation.</p>
+                        <p>Self-employed basic rate taxpayers will receive an additional 25% via tax relief on money put into a pension, and you will need to decide whether a pension or Lifetime ISA is better for you.</p>
+                        <p>Self-employed higher or additional rate taxpayers will benefit more from paying into a pension as the tax relief wins over the Lifetime ISA bonus.</p>
+                        <p>If you’ve maxed out contributions on your pension(s) and you want to save more, the Lifetime ISA is a further option.</p>
+                        <p>But remember, if you withdraw your money from a Lifetime ISA before you’re 60 and it’s not to buy your first home, you’ll usually pay a 25% government penalty, so you may get back less than you put in.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="a3d" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>If you’re not employed, you won’t have a workplace pension and you won’t benefit from employer-matched contributions.</p>
+                        <p>Both a pension and a Lifetime ISA may be good choices for you, and you could contribute to either or both, or to something else such as an ISA or a general investment account.</p>
+                        <p>You will need to decide if a stocks and shares Lifetime ISA, a pension, ISA or general investment account are good choices for you. But remember, if you withdraw your money from a Lifetime ISA before you’re 60 and it’s not to buy your first home, you’ll usually pay a 25% government penalty, so you may get back less than you put in.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="a4a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-right max-620">
+                        <line x1="75%" y1="0%" x2="75%" y2="30%" class="connector-line"></line>
+                        <line x1="75%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>As you're saving to buy your first home costing less than £450,000, you should be able to use the full value of a Lifetime ISA, including the bonus, towards your deposit.</p>
+                        <hr>
+                        <p>But remember, if you withdraw your money from a Lifetime ISA before you’re 60 and it’s not to buy your first home, you’ll usually pay a 25% government penalty, so you may get back less than you put in.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div id="a4b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line" style="marker-end: url(#markerCircle);"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <div class="answer-head">Points for you to think about</div>
+                        <p>Investing is for the longer term. At Nutmeg, we suggest a minimum timeframe of three years to reduce investment risk. As you are planning to buy your house in the next three years, <strong>a cash Lifetime ISA is an alternative option</strong>.</p>
+                        <p>Nutmeg doesn't offer a cash lifetime ISA.</p>
+                        <hr>
+                        <p>If you would like to do more research, here are the ways you can invest:</p>
+                        <br>
+                        <section>
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/isas" target="_blank">
+                                        <h3 class="product-title-bar">ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/lifetime-isa" target="_blank">
+                                        <h3 class="product-title-bar">Lifetime ISA <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/pensions" target="_blank">
+                                        <h3 class="product-title-bar">Pension <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 decision-tree-product-card">
+                                    <a href="/general-investment-account" target="_blank">
+                                        <h3 class="product-title-bar">General investing <span class="svg__inline text pull-right"><svg width="8px" height="12px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g transform="translate(-3.000000, 0.000000)">
+                                                        <polygon class="svg_polygon_" fill="#000000" points="3.66666667 14.1333333 9.93333333 8 3.66666667 1.86666667 5.53333333 0 13.6666667 8 5.53333333 16"></polygon>
+                                                    </g>
+                                                </svg>
+                                            </span></h3>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 100px;"></div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        function recordAllAnswers(e) {
+            var n = ["q0"],
+                t = document.querySelectorAll("input:checked");
+            for (i = 0; i < t.length && (n.push(t[i].value), t[i] != e); i++);
+            return n
+        }
+
+        function renderQuestions(e) {
+            hideAllQuestions(), showQuestions(e), setTimeout(function() {
+                var i = e.pop(),
+                    n = document.getElementById(i).offsetTop;
+                $("html, body").animate({
+                    scrollTop: n - 200
+                })
+            }, 50)
+        }
+
+        function showQuestions(e) {
+            for (i = 0; i < e.length; i++) document.getElementById(e[i]).className = "visible";
+            var n = document.querySelectorAll(".hidden input");
+            for (i = 0; i < n.length; i++) n[i].checked = !1
+        }
+
+        function hideAllQuestions() {
+            var e = document.querySelectorAll(".hidden, .visible");
+            for (i = 0; i < e.length; i++) e[i].className = "hidden"
+        }
+        var inputs = document.querySelectorAll(".decision-tree input[type=radio]");
+        for (i = 0; i < inputs.length; i++) inputs[i].addEventListener("click", function(e) {
+            e || (e = window.event);
+            var i = recordAllAnswers(e.target);
+            renderQuestions(i)
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

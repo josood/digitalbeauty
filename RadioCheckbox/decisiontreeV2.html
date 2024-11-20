@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section>
+        <div class="full-width-bg-white cushion-top-bottom">
+            <div class="container text-left text-left-mobile cushion-bottom" style="background: white">
+                <h1> Do's and Don't</h1>
+                <div class="do">
+                    <h2>Default selection</h2>
+                    <p>It is better to have a selected radio button by default, given that people cannot deselect and set the button back to its original state once one has been selected. A default selection sets the correct user expectation.</p>
+                    <img src="do1.png" style="max-width:80%" class="img-text-center">
+                </div>
+                <div class="do">
+                    <h2>Should I use a Check Box instead of Radio Buttons?</h2>
+                    <p>Use radio buttons if the meaning of the empty checkbox isn’t obvious. In example below, the choices are opposites so radio buttons are the better choice for this option.</p>
+                    <img src="do2.png" style="max-width:80%"  class="img-text-center">
+                </div>
+                <div class="do">
+                    <h2>Radio Buttons or Dropdown?</h2>
+                    <p>Use radio buttons when you want user to read all options.
+                        The options are unfamiliar to user and there is less or no chance that he can predict them.
+                    </p>
+                    <img src="do3.png" style="max-width:80%"  class="img-text-center">
+                </div>
+                <div class="do">
+                    <h2>For label text</h2>
+                    <p>For radio buttons label, try to be consistent. 
+Make sure that all the items are either a sentence, phrase, or word. Try to avoid some options being sentences and others being single words. Using a combination makes it inconsistent hence not a good UI practice.
+                    </p>
+                    <img src="do4.png" style="max-width:80%"  class="img-text-center">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+   
+    <section class="decision-tree" style="min-height: 267px;">
+        <div class="full-width-bg-white cushion-top-bottom">
+            <div class="container text-center text-left-mobile cushion-bottom" style="background: white">
+                 <h1>What component do I use?</h1>
+                <h2><br>Segments Vs Selectors</h2>
+                <div id="q1" class="visible">
+                    <div class="max-620 question">
+                        Can you select more than <b>one</b> option?<br><br>
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1" id="answer-1-a" value="q1-option1">
+                                <label for="answer-1-a" class="">
+                                    Yes
+                                    <br>
+                                    <span>Multi select</span>
+                                </label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1" id="answer-1-b" value="q1-option2">
+                                <label for="answer-1-b" class="">
+                                    No
+                                    <br>
+                                    <span>Single select</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CHECKBOX | YES-->
+
+                <div id="q1-option1" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+                    <div class="max-620 question">
+                        How many options can you select from?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-a" value="a1a">
+                                <label for="answer-1a-a" class="">2-5 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1a" id="answer-1a-b" value="a1b">
+                                <label for="answer-1a-b" class="">More than 5 options</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a1a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Checkbox list</h3>
+                        <p>Checkboxes are used when there are lists of options and the user may select any number of choices. Each checkbox is independent of all other checkboxes in the list, so checking one box doesn't uncheck the others.</p>
+                        <img src="checkbox-list.gif" style="max-width:80%">
+                    </div>
+                </div>
+
+                <div id="a1b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Multi select dropdown list</h3>
+                        <p>Multi select dropdown list is used when a user wants to store multiple values for the same record, whereas dropdown list is used to store a single value for a record. </p>
+                        <img src="multi-select.gif" style="max-width:100%">
+                    </div>
+                </div>
+
+                <!--RADIO | NO-->
+
+                <div id="q1-option2" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        How many options can you select from?<br><br>
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-a" value="q2a">
+                                <label for="question-1b-a" class="">1 option</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-b" value="q2b">
+                                <label for="question-1b-b" class="">2-5 options</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q1b" id="question-1b-c" value="q2c">
+                                <label for="question-1b-c" class="">More than 5 options</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q2a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-left max-620">
+                        <line x1="16.6%" y1="0%" x2="16.6%" y2="30%" class="connector-line"></line>
+                        <line x1="16.6%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 answer">
+
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons padding" style="width:50%">
+                                <img src="switch.gif">
+                                <h3>A toggle switch</h3>
+                                <p>A toggle switch represents a physical switch and is an “either/or” control
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons padding" style="width:50%">
+                                <img src="standalone.gif">
+                                <h3>A stand-alone checkbox</h3>
+                                <p>A stand-alone checkbox is usually used at the end of a form to confirm that the user agrees to certain conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="q2b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-middle max-620">
+                        <line x1="50%" y1="0%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 question">
+                        Are the options short (1-2 words)?
+                        <br><br>
+
+                        <div class="btn-group btn-group-justified available-answers">
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-a" value="a2a">
+                                <label for="answer-2b-a" class="">Yes</label>
+                            </div>
+                            <div class="btn btn-radio btn-block no-icons">
+                                <input type="radio" name="q2b" id="answer-2b-b" value="a2b">
+                                <label for="answer-2b-b" class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="a2a" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-2-left max-620">
+                        <line x1="25%" y1="0%" x2="25%" y2="30%" class="connector-line"></line>
+                        <line x1="25%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+
+                        <h3>Segmented Control</h3>
+                        <p>A segmented control is a linear set of two or more segments, each of which functions as a mutually exclusive button.</p>
+                        <img src="segment.png">
+                    </div>
+                </div>
+
+                <div id="a2b" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="answer max-620">
+                        <h3>Radio button list</h3>
+                        <p>Radio button lists are used when the user needs to select a single option out of a list of options.</p>
+                        <img src="radio-list.gif">
+                    </div>
+                </div>
+
+                <div id="q2c" class="hidden">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="connector connector-3-right max-620">
+                        <line x1="83.3%" y1="0%" x2="83.3%" y2="30%" class="connector-line"></line>
+                        <line x1="83.3%" y1="30%" x2="50%" y2="65%" class="connector-line"></line>
+                        <line x1="50%" y1="65%" x2="50%" y2="100%" class="connector-line"></line>
+                    </svg>
+
+                    <div class="max-620 answer">
+                        <h3>Dropdown / Select</h3>
+                        <p>A drop-down or select is a list of options that is only revealed when a user interacts by clicking on iy</p>
+                        <img src="Select.png" style="max-width: 50%">
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 100px;"></div>
+
+
+            </div>
+
+        </div>
+    </section>
+    
+    <section>
+         <div class="container text-center text-left-mobile cushion-bottom" style="background: white">
+           <h1>What can I do with this component?</h1>
+             <h2>Checkbox, radio and dropdown – Anatomy</h2>
+            <div class="container text-left">
+                <h4>Radio buttons | Single select </h4>
+                <img src="anatomy-radio.png" class="image-pure" style="max-width:50%">
+            </div>
+            <div  class="container text-left">
+                <h4>Checkboxes | Multi-select </h4>
+                <img src="anatomy-checkbox.png" class="image-pure" style="max-width:50%">
+            </div>
+              <div  class="container text-left">
+                <h4>Standard dropdown</h4>
+                <img src="anatomy-selectdropdown.png" class="image-pure" style="max-width:90%">
+            </div>
+        </div>
+    </section>
+
+
+    <section style="display: none">
+        <div class="container">
+            <h1><br>When to use a radio button</h1>
+            <div class="text-left">
+                <ul>
+                    <li>When you only want the user to select one item</li>
+                    <li>If you have fewer than six options</li>
+                    <li>When you want to force a selection of one</li>
+                    <li>If the question has only two options that are YES/NO</li>
+                    <li>If your options are short, consider using multiple choice toggle.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <section  style="display: none">
+        <div class="container">
+            <h1><br>When to use checkboxes</h1>
+            <div class="text-left">
+                <ul>
+                    <li>When you want the user to select more than one option or even none</li>
+                    <li>When you have to say YES, I have read terms and conditions. </li>
+
+                </ul>
+            </div>
+            <br><br><br>
+        </div>
+    </section>
+    <script>
+        function recordAllAnswers(e) {
+            var n = ["q1"],
+                t = document.querySelectorAll("input:checked");
+            for (i = 0; i < t.length && (n.push(t[i].value), t[i] != e); i++);
+            return n
+        }
+
+        function renderQuestions(e) {
+            hideAllQuestions(), showQuestions(e), setTimeout(function() {
+                var i = e.pop(),
+                    n = document.getElementById(i).offsetTop;
+                $("html, body").animate({
+                    scrollTop: n - 200
+                })
+            }, 50)
+        }
+
+        function showQuestions(e) {
+            for (i = 0; i < e.length; i++) document.getElementById(e[i]).className = "visible";
+            var n = document.querySelectorAll(".hidden input");
+            for (i = 0; i < n.length; i++) n[i].checked = !1
+        }
+
+        function hideAllQuestions() {
+            var e = document.querySelectorAll(".hidden, .visible");
+            for (i = 0; i < e.length; i++) e[i].className = "hidden"
+        }
+        var inputs = document.querySelectorAll(".decision-tree input[type=radio]");
+        for (i = 0; i < inputs.length; i++) inputs[i].addEventListener("click", function(e) {
+            e || (e = window.event);
+            var i = recordAllAnswers(e.target);
+            renderQuestions(i)
+        });
+    </script>
+
+
+
+</body></html>

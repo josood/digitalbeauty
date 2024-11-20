@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://skywalkapps.github.io/bootstrap-dropmenu/stylesheets/bootstrap-dropmenu.min.css">
+
+    <style>
+        .nav>.dropdown-megamenu {
+            position: static;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav .open .dropdown-container {
+                position: static;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                border: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+
+        .dropdown-megamenu>.dropdown-container {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            padding: 15px;
+        }
+
+        .dropdown-megamenu .dropdown-menu {
+            display: block;
+        }
+
+        .link-image .media-object {
+            float: left;
+            margin-bottom: 7.5px;
+        }
+
+        .link-image-sm+.link-image-sm .media-object {
+            margin-left: 7.5px;
+        }
+
+        .thumbnail .caption {
+            min-height: 120px;
+        }
+
+        .thumbnail:hover {
+            text-decoration: none;
+        }
+
+        /* Link list */
+        .list-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-links li {
+            line-height: 1.71428571;
+        }
+
+        .list-links a {
+            color: #555;
+        }
+
+        .list-links a:hover,
+        .list-links a:focus,
+        .list-links a:active {
+            color: #22527b;
+        }
+
+        /* General styles to improve presentation */
+        html,
+        body {
+            height: 100%;
+            min-height: 500px;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #59a874 0, #449a63 100%);
+        }
+
+        .example-megamenu {
+            width: 100%;
+            max-width: 1140px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="example-megamenu">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown dropdown-megamenu open">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="">Fashion111</a>
+                            <ul class="dropdown-container">
+                                <li><a href="#">Men's</a></li>
+                                <li><a href="#">Women's</a>
+                                    <ul class="dropdown-container">
+
+                                        <li><a href="#">Men's</a></li>
+                                        <li><a href="#">Women's</a></li>
+                                        <li><a href="#">Kids</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Kids</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-megamenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Electronics</a>
+
+                            <div class="dropdown-container">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-2">
+
+                                        <h5>Top categories</h5>
+                                        <ul class="list-links">
+                                            <li><a href="#">Cell Phones &amp; Accessories</a></li>
+                                            <li><a href="#">Cameras &amp; Photo</a></li>
+                                            <li><a href="#">Computers &amp; Tablets</a></li>
+                                        </ul>
+
+                                    </div><!-- /col -->
+
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <h5>Other categories</h5>
+                                        <ul class="list-links">
+                                            <li><a href="#">Car Audio, Video &amp; GPS</a></li>
+                                            <li><a href="#">iPhone</a></li>
+                                            <li><a href="#">iPad</a></li>
+                                            <li><a href="#">TV, Audio</a></li>
+                                            <li><a href="#">Video Games &amp; Consoles</a></li>
+                                        </ul>
+
+                                    </div><!-- /col -->
+
+                                    <div class="col-sm-12 col-md-7">
+                                        <img src="holder.js/100px200">
+                                    </div><!-- /col -->
+
+                                </div><!-- /row -->
+                            </div><!-- /dropdown-container -->
+                        </li>
+                        <li class="dropdown dropdown-megamenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deals</a>
+
+                            <div class="dropdown-container">
+                                <div class="row">
+
+                                    <div class="col-sm-3">
+
+                                        <h5>Best deals of the day</h5>
+                                        <ul class="list-links">
+                                            <li><a href="#">Car Audio, Video &amp; GPS</a></li>
+                                            <li><a href="#">iPhone</a></li>
+                                            <li><a href="#">iPad</a></li>
+                                            <li><a href="#">TV, Audio</a></li>
+                                            <li><a href="#">Video Games &amp; Consoles</a></li>
+                                        </ul>
+
+                                    </div><!-- /col -->
+
+                                    <div class="col-sm-3">
+
+                                        <a href="#" class="thumbnail">
+                                            <img src="holder.js/100px140" alt="">
+                                            <div class="caption">
+                                                <h5>Waterproof cellphone cover</h5>
+                                                <p>$5.99</p>
+                                            </div>
+                                        </a>
+
+                                    </div><!-- /col -->
+
+                                    <div class="col-sm-3">
+
+                                        <a href="#" class="thumbnail">
+                                            <img src="holder.js/100px140" alt="">
+                                            <div class="caption">
+                                                <h5>Large 20 slot leather watch box organizer</h5>
+                                                <p>$25.99</p>
+                                            </div>
+                                        </a>
+
+                                    </div><!-- /col -->
+
+                                    <div class="col-sm-3">
+
+                                        <a href="#" class="thumbnail">
+                                            <img src="holder.js/100px140" alt="">
+                                            <div class="caption">
+                                                <h5>Samsung Galaxy Tab A SM-P550NZAAXAR 9.7-Inch W-Fi Tablet (Titanium with S-Pen)</h5>
+                                                <p>$319</p>
+                                            </div>
+                                        </a>
+
+                                    </div><!-- /col -->
+
+
+                                </div><!-- /row -->
+                            </div><!-- /dropdown-container -->
+                        </li>
+
+                        <li class="dropdown dropdown-megamenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+
+                            <div class="dropdown-container">
+                                <div class="row">
+
+                                    <div class="col-sm-6 col-md-4">
+                                        <h5>Contact us</h5>
+                                        <p>Feel free to drop us a line, we will respond as sson as possible.</p>
+                                        <form>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputText1">Text</label>
+                                                <textarea type="password" class="form-control" id="exampleInputText1" placeholder="Your Message" rows="3"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Submit</button>
+                                        </form>
+                                    </div><!-- /col -->
+
+                                    <div class="col-sm-6 col-md-8">
+                                        <img src="holder.js/100px260?text=Map">
+                                    </div><!-- /col -->
+
+                                </div><!-- /row -->
+                            </div><!-- /dropdown-container -->
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body></html>

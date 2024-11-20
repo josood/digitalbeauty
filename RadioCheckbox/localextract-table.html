@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>${templateVars.textHelper.resolve('company.private.extract')}</title>
+    <meta charset="utf-8" />
+    <style type="text/css" media="all">
+        @font-face {
+            font-family: 'NotoSansRegular';
+            src: url('files/NotoSans-Regular.ttf');
+            -fs-pdf-font-embed: embed;
+            -fs-pdf-font-encoding: Identity-H;
+        }
+
+        @font-face {
+            font-family: 'NotoSansBold';
+            src: url('files/NotoSans-Bold.ttf');
+            -fs-pdf-font-embed: embed;
+            -fs-pdf-font-encoding: Identity-H;
+        }
+
+        @font-face {
+            font-family: 'NotoSansSemiBold';
+            src: url('files/NotoSans-SemiBold.ttf');
+            -fs-pdf-font-embed: embed;
+            -fs-pdf-font-encoding: Identity-H;
+        }
+
+        @font-face {
+            font-family: 'NotoSansLight';
+            src: url('files/NotoSans-Light.ttf');
+            -fs-pdf-font-embed: embed;
+            -fs-pdf-font-encoding: Identity-H;
+        }
+
+        /* PAGE */
+        @page {
+            margin: 0;
+            margin-top: 5.0cm;
+            margin-bottom: 2cm;
+            padding-top: 0;
+
+            @top-center {
+                content: element(header);
+                margin-bottom: 0.5cm;
+            }
+
+            @bottom-center {
+                content: element(footer);
+                margin: 0;
+                padding: 0 1cm 0 1cm;
+            }
+
+        }
+
+        @page:first{
+            margin-top: 1cm;
+            margin-bottom: 1cm
+        }
+
+        body {
+            margin: 0 auto;
+            font-family: "NotoSansRegular", serif, "Helvetica", Arial, sans-serif;
+            -fs-pdf-font-embed: embed;
+            -fs-pdf-font-encoding: Identity-H;
+        }
+
+        #header {
+            position: running(header);
+        }
+
+        #footer {
+            position: running(footer);
+        }
+
+        .pagebreak {
+            clear: both;
+            page-break-after: always;
+        }
+
+        .footer {
+            font-size: 6pt;
+        }
+
+
+        .header-line {
+            background-image: url("files/pattern.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            background-color: #364758;
+            text-align: center;
+        }
+
+        .main-title {
+            margin: 0;
+            margin-top: 3px;
+            font-size: 20pt;
+            color: white;
+            text-align: right;
+            padding: 10px 20px
+        }
+
+        .entity-name {
+            text-align: center;
+            font-size: 20pt;
+            line-height: 1.5;
+        }
+
+        .main {
+            margin: 20px;
+        }
+
+        .limited-width {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cert-text {
+            color: #505050;
+        }
+
+        .cert-blob {
+            margin-top: 2cm;
+            text-align: center;
+            font-size: 12pt;
+            color: #505050;
+        }
+
+        .table,
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 0;
+        }
+
+        .table td,
+        table td {
+            padding: 0;
+        }
+
+        .cf:before,
+        .cf:after {
+            content: " ";
+            /* 1 */
+            display: table;
+            /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        #pagenumber:before {
+            content: counter(page);
+        }
+
+        #pagecount:before {
+            content: counter(pages);
+        }
+
+        .header-info {
+            padding-left: 20px;
+        }
+
+        .header-info .company-type {
+            line-height: 100%;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 7pt;
+            margin: 0px;
+
+        }
+
+        .header-info h2 {
+            font-size: 14pt;
+            line-height: 80%;
+            text-align: left;
+            font-family: "NotoSansBold", "Helvetica", Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            font-weight: normal;
+        }
+
+        .header-info .business-code {
+            line-height: 100%;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 9pt;
+            margin: 0px;
+            padding-top: 10px;
+        }
+
+        .main h3 {
+            font-size: 17pt;
+            line-height: 180%;
+            text-align: left;
+            font-family: "NotoSansBold", "Helvetica", Arial, sans-serif;
+            -fs-pdf-font-embed: embed;
+            -fs-pdf-font-encoding: Identity-H;
+            margin: 0px;
+            font-weight: normal;
+        }
+
+        .company-details {
+            font-size: 10pt;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 0;
+
+
+        }
+
+        .label {
+            line-height: 140%;
+            text-align: left;
+            font-family: "NotoSansSemiBold", "Helvetica", Arial, sans-serif;
+            padding: 10px;
+            width: 40%;
+            font-weight: normal;
+        }
+
+        .value {
+            padding: 8px;
+            line-height: 140%;
+        }
+
+        .row1 {
+            background: #f1f4fa
+        }
+
+        .row2 {
+            background: #fff
+        }
+
+        .spacer {
+            height: 40px;
+        }
+
+        .table-heading {
+            background: #e4e6eb;
+            border: 3px solid white;
+            border-left: none;
+            border-right: none;
+        }
+
+        h4 {
+            font-size: 12pt;
+            line-height: 180%;
+            text-align: left;
+            font-family: "NotoSansSemiBold", "Helvetica", Arial, sans-serif;
+            margin: 0px;
+            font-weight: normal;
+            padding: 5px 10px;
+        }
+
+        .cover {
+            height: 20cm;
+        }
+
+        .nested-table-top {
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid #55565b;
+            border-bottom: none;
+            min-height: 10cm;
+        }
+        .nested-table-top tr,  .nested-table-top td{
+            margin: 0px; padding: 0px;
+        }
+
+        .nested-table-middle {
+            background-image: url("files/pattern.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+            background-color: #364758;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            height: 100%;
+        }
+        .nested-table-bottom {
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid #55565b;
+            border-top: none;
+        }
+        .cover-details{
+            text-align: left;
+            padding: 20px!important;
+        }
+        
+        .cover-details .company-type{
+               line-height: 100%;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 7pt;
+            margin: 0px;
+        }
+        .cover-details h1{
+             font-size: 14pt;
+            line-height: 80%;
+            text-align: left;
+            font-family: "NotoSansBold", "Helvetica", Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            font-weight: normal;
+        }
+        
+        .cover h2 {
+            font-size: 28pt;
+            line-height: 180%;
+            text-align: left;
+            font-family: "NotoSansLight", "Helvetica", Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            font-weight: 100;
+            text-align: center;
+            text-transform: uppercase
+        }
+        .cover-details .business-code{
+             line-height: 100%;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 9pt;
+            margin: 0px;
+            padding-top: 10px;
+        }
+        .disclaimer{
+               line-height: 100%;
+            text-align: left;
+            font-size: 7pt;
+            margin: 0px;
+            padding: 20px;
+            height: 8cm;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="cover">
+        <tr>
+            <td align="center" valign="bottom">
+                <table class="nested-table-top" border="1">
+                    <tr>
+                        <td align="center" height="100%" valign="bottom">
+                            <img src="files/verne-logo.png" width="300" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cover-details">
+                            <div class="company-type">Private Company</div>
+                            <h1 data-pdf-bookmark="exclude">${templateVars.businessName}</h1>
+                            <div class="business-code">${templateVars.businessIdentifier}</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="nested-table-middle">
+                    <tr>
+                        <td>
+                            <h2>Private Company Summary Extract</h2>
+                            <div>Generated: ${templateVars.now.timeText}</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table class="nested-table-bottom" height="100%">
+                    <tr>
+                        <td align="left" valign="bottom">
+                            <div class="disclaimer">Disclaimer: This is a machine generated PDF of selected content from our databases. This functionality is provided solely for your convenience and is in no way intended to replace original scanned PDF.  The PDF is automatically generated AS IS and AS AVAILABLE and are not retained in our systems.  </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+
+
+
+    </table>
+
+
+    <div class="pagebreak"> </div>
+
+    <div class="header" id="header">
+        <table class="header-info">
+            <tr>
+                <td width="100%">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="company-type">Private Company</div>
+                                <h2 data-pdf-bookmark="exclude">${templateVars.businessName}</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-code">
+                                ${templateVars.businessIdentifier}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <div class="logo" style="position:relative;">
+                        <img src="files/verne-logo.png" style=" width: 160px; display:block;auto;" />
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <div class="header-line">
+            <h2 class="main-title">
+                COMPANY EXTRACT
+            </h2>
+        </div>
+    </div> <!-- eof .header -->
+    <div id="footer" class="footer">
+
+        <div>
+            <table class="table cert-text">
+                <tr>
+                    <td>Generated: ${templateVars.now.timeText}, Document ID: ${templateVars.templateCode}</td>
+                    <td style="text-align: right;">Page <span id="pagenumber"></span> of <span id="pagecount"></span></td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div style="-fs-page-sequence: start"></div>
+
+    <div class="main">
+        <h3>General Details</h3>
+        <table class=" company-details">
+            <tr class="row1">
+                <td class="label">Company Name</td>
+                <td class="value">Genesis Energy Limited Ltd</td>
+            </tr>
+            <tr class="row2">
+                <td class="label">Company status</td>
+                <td class="value">Registered</td>
+            </tr>
+            <tr class="row1">
+                <td class="label">Company type</td>
+                <td class="value">Private Company</td>
+            </tr>
+            <tr class="row2">
+                <td class="label">Company class </td>
+                <td class="value">Limited by shares</td>
+            </tr>
+            <tr class="row1">
+                <td class="label">Company number </td>
+                <td class="value">COY-0000000179</td>
+            </tr>
+            <tr class="row2">
+                <td class="label">Registration date</td>
+                <td class="value">12 January 2012</td>
+            </tr>
+            <tr class="row1">
+                <td class="label">Translation of constitution</td>
+                <td class="value">Not specified</td>
+            </tr>
+
+        </table>
+
+        <div class="spacer"></div>
+        <h3>Addresses</h3>
+        <table class="company-details">
+            <tr class="row1">
+                <td class="label">Registered office address </td>
+                <td class="value">9718 nominavi Drive, mucius, Kansas City, Geraldine, Canterbury, 1058, New Zealand</td>
+            </tr>
+            <tr class="row2">
+                <td class="label">Principal place of business </td>
+                <td class="value">0866 aliquam Court, in, Darwin, Blenheim, Marlborough, 5162, New Zealand</td>
+            </tr>
+            <tr class="row1">
+                <td class="label">Postal address</td>
+                <td class="value">0175 brute Street, legere, Gisborne, Waitangi, Chatham Islands, 1198, New Zealand</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="table-heading">
+                    <h4>
+                        Contact details
+                    </h4>
+                </td>
+            </tr>
+            <tr class="row1">
+                <td class="label">Telephone number</td>
+                <td class="value">+64 (0) 6001991</td>
+            </tr>
+            <tr class="row2">
+                <td class="label">Mobile number</td>
+                <td class="value">+64 (95) 7024130</td>
+            </tr>
+            <tr class="row1">
+                <td class="label">Email address</td>
+                <td class="value">moses.sutton@example.com</td>
+            </tr>
+        </table>
+        <div class="pagebreak"> </div>
+
+
+
+
+
+
+
+        <h2 class="limited-width entity-name">${templateVars.businessName}<br /> ${templateVars.businessIdentifier}</h2>
+
+
+
+
+        <div class="cf"></div>
+
+        <div class="cf"></div>
+
+    </div> <!-- eof .main -->
+
+</body>
+
+</html>
